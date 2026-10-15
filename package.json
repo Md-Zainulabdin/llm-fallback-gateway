@@ -1,0 +1,29 @@
+{
+  "name": "llm-fallback-gateway",
+  "version": "1.0.0",
+  "description": "A zero-dependency LLM fallback gateway: routes chat requests across multiple providers with automatic failover, circuit breakers, timeouts, and latency metrics.",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "stress": "tsx scripts/stressTest.ts",
+    "test": "node --import tsx --test src/core/circuitBreaker.test.ts src/core/router.test.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc"
+  },
+  "keywords": [
+    "llm",
+    "gateway",
+    "fallback",
+    "circuit-breaker",
+    "failover",
+    "resilience"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
